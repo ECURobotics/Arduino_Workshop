@@ -1,0 +1,28 @@
+//Need switch, 10K Ohm resistor, 330 Ohm resistor, LED 
+// Pins connected together on the swtich need to be positioned in the same coloumn (i.e. poiting towards each other)
+
+int LEDPin = 8;
+int buttonPin = 12;
+int buttonRead;
+int dt = 100;
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(LEDPin, OUTPUT);
+pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+buttonRead = digitalRead(buttonPin);
+Serial.println(buttonRead);
+delay(dt);
+if(buttonRead==1){
+  digitalWrite(LEDPin, LOW);
+}
+if(buttonRead==0){
+  digitalWrite(LEDPin, HIGH);
+}
+
+}
