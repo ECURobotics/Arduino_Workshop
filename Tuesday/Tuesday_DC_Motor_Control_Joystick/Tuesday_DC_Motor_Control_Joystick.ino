@@ -4,6 +4,8 @@ int dir2=3;
 int mSpeed;
 int jPin=A1;
 int jVal;
+int switchpin=2;
+int switchval;
 
 void setup() {
   // put your setup code here, to run once:
@@ -12,13 +14,15 @@ pinMode(dir1, OUTPUT);
 pinMode(dir2, OUTPUT);
 pinMode(jPin, INPUT);
 Serial.begin(9600);
+digitalWrite(switchpin, HIGH);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
 // Directions set in opposite directions for motor to spin one way
-jVal=analogRead(jPin);
+xVal=analogRead(xPin);
+yVal = analogRead(yPin);
 Serial.println(jVal);
 if(jVal<512){
   digitalWrite(dir1, LOW);

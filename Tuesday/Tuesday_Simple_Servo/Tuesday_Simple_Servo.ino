@@ -12,7 +12,7 @@ myServo.attach(servoPin);
 
 void loop() {
   // put your main code here, to run repeatedly:
-Serial.println("Wwhat angle for the servo?");
+Serial.println("What angle for the servo?");
 while (Serial.available()==0){  //loops and waits until input
 }
 servoPos=Serial.parseInt();     //reads user input
