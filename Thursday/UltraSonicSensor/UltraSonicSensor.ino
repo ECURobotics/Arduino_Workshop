@@ -1,6 +1,7 @@
 int trigPin=12;
 int echoPin=11;
 int pingTravelTime;
+//Note ping travels in microseconds
 
 void setup() {
   // put your setup code here, to run once:

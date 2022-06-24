@@ -37,7 +37,7 @@ lcd.print(tempC);
 lcd.setCursor(0,1);
 lcd.print("Humidity= ");
 lcd.print(humidity);
-lcd.print(" %");
+lcd.print("%");
 delay(500);
 lcd.clear();
 
